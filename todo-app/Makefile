@@ -2,7 +2,7 @@ CXX := g++
 CXXFLAGS := -std=c++20 -Wall
 TARGET := ./todo-app.out
 SOURCES := ${wildcard *.cpp}
-INCLUDES := ${wildcard *.hpp} ${wildcard *.h}
+INCLUDES := ${wildcard *.hpp}
 
 build: $(TARGET)
 
