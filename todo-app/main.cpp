@@ -29,10 +29,12 @@ int main() {
         } else if (op == "set") {
             unsigned int index = 0;
             std::string status{};
-            while (index > manager.get_tasks().size()) {
+            do {
                 std::cout << "Enter task index to set the status: ";
                 std::cin >> index;
             }
+            while (index >= manager.get_tasks().size());
+             
             while (status != "completed" && status != "incomplete") {
                 std::cout << "Please enter either completed or incomplete: ";
                 std::cin >> status;
